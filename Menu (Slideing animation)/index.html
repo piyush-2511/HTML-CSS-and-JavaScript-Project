@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Hamburger Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <!-- Checkbox for toggling the sidebar -->
+        <input type="checkbox" id="sidebar-active">
+        
+        <!-- Hamburger icon to open the sidebar -->
+        <label for="sidebar-active" class="open-sidebar-button" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000" aria-hidden="true">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+        </label>
+
+        <!-- Overlay to blur the background -->
+        <label for="sidebar-active" id="overlay" aria-hidden="true"></label>
+
+        <!-- Sidebar with links -->
+        <div class="links-container">
+            <!-- Close icon for the sidebar -->
+            <label for="sidebar-active" class="close-sidebar-button" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000" aria-hidden="true">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </label>
+
+            <!-- Navigation links -->
+            <a href="#" class="home-link">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Programmes</a>
+            <a href="#">Our Campaign</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="content">
+        <div class="bg">
+            <img src="bg.avif" alt="Descriptive text about the image">
+        </div>
+    </div>
+</body>
+</html>
+ 
