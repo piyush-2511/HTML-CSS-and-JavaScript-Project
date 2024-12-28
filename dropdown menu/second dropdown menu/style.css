@@ -1,0 +1,131 @@
+*{
+    --theme-color: rgb(255, 211, 154);
+    --text-color : #000;
+    --accent-color: #deaf37;
+
+}
+
+
+
+body{
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav{
+    background-color: rgb(255, 211, 154);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo > img{
+    height: 100%;
+    width: 100%;
+    margin: 0 10px;
+}
+.links{
+    color: black;
+    font-size: 16px;
+    height: 80%;
+    /* height: 80%; */
+    padding: 0 10px;
+    margin: 5px;
+    align-content: center;
+    /* border: 1px solid white; */
+    text-decoration: none;
+}
+.links:hover{
+    /* border: 1px solid white; */
+    /* border-radius: 5px;
+    background-color: antiquewhite; */
+    /* text-decoration: underline; */
+
+}
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    /* height: 80%; */
+    /* margin: 5px; */
+    align-content: center;
+    display: flex;
+    height: 100%;
+    /* border: 1px solid white; */
+    /* text-decoration: none; */
+
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + 1.25rem);
+    margin: 0;
+    padding: 16px 0;
+    display: flex;
+    width: 225px;
+    flex-direction: column;
+    border: 3px solid rgb(255, 211, 154);
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    transform: translateY(-10px);
+    pointer-events: none;
+    
+    
+}
+
+.dropdown.active > .links + .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.dm-links{
+
+    height: 40px;
+    border-radius: 3px;
+    color: var(--text-color);
+    
+}
+.dm-links:hover{
+    background-color: bisque;
+    /* height: 40px; */
+    border-radius: 3px;
+}
+
+/*Underlining animation*/
+.links:hover > .line{
+    height: 3px ;
+    width: 0;
+    background-color: rgb(130, 73, 0) ;
+    animation: lining 1s linear forwards;
+}
+
+
+
+@keyframes lining{
+    
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+
